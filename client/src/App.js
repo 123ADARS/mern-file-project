@@ -19,7 +19,6 @@ function App() {
 
         const response = await uploadFile(data);
         setResult(response.path);
-       
       }
     }
     getImage();
@@ -31,10 +30,10 @@ function App() {
 
   return (
     <div className='container'>
-      <img src={url} className='img' alt="" />
+      <img src={url} className='img'alt=''/>
       <div className='wrapper'>
-        <h1>Simple file sharing!</h1>
-        <p>Upload and share the download link.</p>
+        <h1 class="title">File Sharing Application!</h1>
+        <p>Upload & share Download link...</p>
         
         <button onClick={() => onUploadClick()}>Upload</button>
         <input
@@ -45,6 +44,7 @@ function App() {
         />
 
         <a href={result}>{result}</a> 
+        <h3>{file.name}</h3>
       </div>
     </div>
   );
